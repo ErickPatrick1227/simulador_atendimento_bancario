@@ -33,7 +33,7 @@ public class BancoDados {
                 rs.getInt("id"),
                 rs.getString("nome"),
                 rs.getInt("prioridade"),
-                rs.getString("chegada"),
+                rs.getTimestamp("chegada").toLocalDateTime(),
                 rs.getDouble("tempo_servico"),
                 rs.getString("status")
         );

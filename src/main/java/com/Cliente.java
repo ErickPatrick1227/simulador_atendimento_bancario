@@ -1,14 +1,17 @@
 package com;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class Cliente {
     private int id;
     private String nome;
     private int prioridade;
-    private String chegada;
+    private LocalDateTime chegada;
     private double tempoServico;
     private String status;
 
-    public Cliente (int id, String nome, int prioridade, String chegada, double tempoServico, String status) {
+    public Cliente (int id, String nome, int prioridade, LocalDateTime chegada, double tempoServico, String status) {
         this.id = id;
         this.nome = nome;
         this.prioridade = prioridade;
@@ -41,11 +44,11 @@ public class Cliente {
         this.prioridade = prioridade;
     }
 
-    public String getChegada() {
+    public LocalDateTime getChegada() {
         return chegada;
     }
 
-    public void setChegada(String chegada) {
+    public void setChegada(LocalDateTime chegada) {
         this.chegada = chegada;
     }
 
@@ -63,6 +66,10 @@ public class Cliente {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public boolean isCancelado() {
+        return false;
     }
 }
 
