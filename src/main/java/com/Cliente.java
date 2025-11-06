@@ -1,4 +1,4 @@
-package com.example;
+package com;
 
 public class Cliente {
     private int id;
